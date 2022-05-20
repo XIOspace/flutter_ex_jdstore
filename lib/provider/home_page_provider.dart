@@ -24,10 +24,17 @@ class HomePageProvider with ChangeNotifier{
       isLoading = false;
 
       if(res.code==200){
-        print(res.data);
+        // print(res.data);
 
         // 將請求的json轉化成map對象
         model = HomePageModel.fromJson(res.data);
+
+        // 改成這樣是為了能把Dart的資料格式轉換回Json格式，方便打印
+        // print(model.toJson(model));
+
+        // 修改完HomePageModel之後，去掉報錯的model
+        print(model.toJson());
+
       }
       // 這部分在這沒太多必要，故直接省略
       // else{

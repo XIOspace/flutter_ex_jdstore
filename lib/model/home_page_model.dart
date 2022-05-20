@@ -1,36 +1,93 @@
+// class HomePageModel {
+//   int? code;
+//   String? msg;
+//   Data? data;
+//
+//   HomePageModel({this.code, this.msg, this.data});
+//
+//   HomePageModel.fromJson(Map<String, dynamic> json) {
+//     code = json['code'];
+//     msg = json['msg'];
+//     data = json['data'] != null ? new Data.fromJson(json['data']) : null;
+//   }
+//
+//   Map<String, dynamic> toJson(HomePageModel model) {
+//     final Map<String, dynamic> data = new Map<String, dynamic>();
+//     data['code'] = this.code;
+//     data['msg'] = this.msg;
+//     if (this.data != null) {
+//       data['data'] = this.data!.toJson();
+//     }
+//     return data;
+//   }
+// }
+//
+// class Data {
+//   List<Swipers>? swipers;
+//   List<Logos>? logos;
+//   List<Quicks>? quicks;
+//   PageRow? pageRow;
+//
+//   Data({this.swipers, this.logos, this.quicks, this.pageRow});
+//
+//   Data.fromJson(Map<String, dynamic> json) {
+//     if (json['swipers'] != null) {
+//       swipers = <Swipers>[];
+//       json['swipers'].forEach((v) {
+//         swipers!.add(new Swipers.fromJson(v));
+//       });
+//     }
+//     if (json['logos'] != null) {
+//       logos = <Logos>[];
+//       json['logos'].forEach((v) {
+//         logos!.add(new Logos.fromJson(v));
+//       });
+//     }
+//     if (json['quicks'] != null) {
+//       quicks = <Quicks>[];
+//       json['quicks'].forEach((v) {
+//         quicks!.add(new Quicks.fromJson(v));
+//       });
+//     }
+//     pageRow =
+//     json['pageRow'] != null ? new PageRow.fromJson(json['pageRow']) : null;
+//   }
+//
+//   Map<String, dynamic> toJson() {
+//     final Map<String, dynamic> data = new Map<String, dynamic>();
+//     if (this.swipers != null) {
+//       data['swipers'] = this.swipers!.map((v) => v.toJson()).toList();
+//     }
+//     if (this.logos != null) {
+//       data['logos'] = this.logos!.map((v) => v.toJson()).toList();
+//     }
+//     if (this.quicks != null) {
+//       data['quicks'] = this.quicks!.map((v) => v.toJson()).toList();
+//     }
+//     if (this.pageRow != null) {
+//       data['pageRow'] = this.pageRow!.toJson();
+//     }
+//     return data;
+//   }
+// }
+
+
+
+
+
+// 把原本是Data部分的class改為HomePageModel
+// 把原本是Data的部分改為HomePageModel
 class HomePageModel {
-  int? code;
-  String? msg;
-  Data? data;
-
-  HomePageModel({this.code, this.msg, this.data});
-
-  HomePageModel.fromJson(Map<String, dynamic> json) {
-    code = json['code'];
-    msg = json['msg'];
-    data = json['data'] != null ? new Data.fromJson(json['data']) : null;
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['code'] = this.code;
-    data['msg'] = this.msg;
-    if (this.data != null) {
-      data['data'] = this.data!.toJson();
-    }
-    return data;
-  }
-}
-
-class Data {
   List<Swipers>? swipers;
   List<Logos>? logos;
   List<Quicks>? quicks;
   PageRow? pageRow;
 
-  Data({this.swipers, this.logos, this.quicks, this.pageRow});
+  // 把原本是Data的部分改為HomePageModel
+  HomePageModel({this.swipers, this.logos, this.quicks, this.pageRow});
 
-  Data.fromJson(Map<String, dynamic> json) {
+  // 把原本是Data的部分改為HomePageModel
+  HomePageModel.fromJson(Map<String, dynamic> json) {
     if (json['swipers'] != null) {
       swipers = <Swipers>[];
       json['swipers'].forEach((v) {
