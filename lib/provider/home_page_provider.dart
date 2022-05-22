@@ -33,7 +33,7 @@ class HomePageProvider with ChangeNotifier{
         // print(model.toJson(model));
 
         // 修改完HomePageModel之後，去掉報錯的model
-        print(model.toJson());
+        // print(model.toJson());
 
       }
       // 這部分在這沒太多必要，故直接省略
